@@ -48,8 +48,6 @@ struct HelpModalView: View {
                 .frame(maxWidth: 400)
             HStack(alignment: .center){
                 PlayerViewController(player: player)
-    //                .resizable()
-    //                .scaledToFill()
                     .frame(width: 443/3.5, height: 890/3.5)
                     .overlay(
                         RoundedRectangle(cornerRadius: 16).stroke(Color(UIColor(hexString: "484848")), lineWidth: 3)

@@ -12,8 +12,6 @@ struct DragDropApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-//            QuizView()
-//            HelpModalView()
         }
     }
 }
