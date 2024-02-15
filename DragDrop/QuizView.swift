@@ -21,10 +21,6 @@ extension ImageData: Transferable {
     }
 }
 
-extension UTType {
-    static var image: UTType { UTType(exportedAs: "com.dragdrop") }
-}
-
 struct pastQuiz: Codable, Identifiable {
     var id = UUID()
     let isCorrect: Int
