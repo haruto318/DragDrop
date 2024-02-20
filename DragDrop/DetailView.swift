@@ -13,11 +13,12 @@ struct DetailView: View {
 
     var quizDetail: pastQuiz
     
-    init(quizDetail: pastQuiz) {
-        self.quizDetail = quizDetail
-    }
-
+//    init(quizDetail: pastQuiz) {
+//        self.quizDetail = quizDetail
+//        print(quizDetail)
+//    }
     
+
     var body: some View {
         VStack{
             Spacer()
@@ -35,11 +36,13 @@ struct DetailView: View {
                 .frame(width: 230, height: 150)
             Spacer()
             Text(quizDetail.quizData[3])
-                .font(.custom("KaiseiOpti-Medium", size: 20.0))
+                .font(.custom("KaiseiOpti-Medium", size: 18.0))
                 .foregroundColor(Color(UIColor(hexString: "484848")))
                 .padding(.all, 20)
             Spacer()
-        }.background(Color(UIColor(hexString: "F6F5F0")))
+        }.background(Color(UIColor(hexString: "F6F5F0"))).onAppear{
+            print(quizDetail)
+            }
     }
 }
 

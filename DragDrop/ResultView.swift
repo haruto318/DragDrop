@@ -38,6 +38,49 @@ extension UIColor {
 }
 
 
+struct DetailButtonView: View {
+    @State var isShowModalView: Bool = false
+    @State var selectedQuizIndex: Int = 0
+    
+    var selectedQuiz: pastQuiz
+    var index: Int
+    
+    var body: some View {
+        Button(action: {
+            isShowModalView = true
+        }) {
+            Rectangle()
+                .foregroundColor(Color(UIColor(hexString: "F6F5F0")))
+                .frame(width: 310, height: 55)
+                .border(Color(UIColor(hexString: "B2B2B0")), width: 5)
+                .overlay(
+                    HStack{
+                        Spacer()
+                        Text("Q.\(index + 1)")
+                            .font(.custom("KaiseiOpti-Medium", size: 24.0))
+                            .foregroundColor(Color(UIColor(hexString: "6C6C6A")))
+                        Spacer()
+                        Text("\(selectedQuiz.quizData[0])")
+                            .font(.custom("KaiseiOpti-Medium", size: 24.0))
+                            .foregroundColor(Color(UIColor(hexString: "6C6C6A")))
+                            .frame(width: 200, height: 55)
+                        Spacer()
+                    }
+                    
+                )
+        }
+        .sheet(isPresented: $isShowModalView, onDismiss : {
+            self.isShowModalView = false
+            print("Close")
+            
+        })
+        {
+            DetailView(quizDetail: selectedQuiz)
+        }
+    }
+}
+
+
 
 
 struct QuizData: Codable{
@@ -79,6 +122,12 @@ struct ResultView: View {
         .init(name: "aji", imageName: "aji"),
         .init(name: "ootoro", imageName: "ootoro"),
       ]
+    
+    func DetailButtonAction(i: Int){
+        self.selectedQuizIndex = i
+        print(i)
+        self.isShowModalView = true
+    }
 
 
     
@@ -93,17 +142,9 @@ struct ResultView: View {
             VStack(spacing: 28) {
                 VStack{
                     HStack(alignment: .center){
-//                        Spacer()
                         Text("Score")
                             .font(.custom("KaiseiOpti-Medium", size: 30.0))
                             .foregroundColor(Color(UIColor(hexString: "484848")))
-//                        Spacer()
-//                        Button (action: {
-//                            
-//                        }){
-//                            Text("Home")
-//                        }
-//                        Spacer()
                     }
                     Text("\(score) pt") 
                         .font(.custom("KaiseiOpti-Medium", size: 54.0))
@@ -142,40 +183,39 @@ struct ResultView: View {
                 
     
                 VStack{
-                    ForEach(0..<4) { i in
-                        Button(action: {
-                            self.selectedQuizIndex = i
-                            print(i)
-                            self.isShowModalView = true
-                        }) {
-                            Rectangle()
-                                .foregroundColor(Color(UIColor(hexString: "F6F5F0")))
-                                .frame(width: 310, height: 55)
-                                .border(Color(UIColor(hexString: "B2B2B0")), width: 5)
-                                .overlay(
-                                    HStack{
-                                        Spacer()
-                                        Text("Q.\(i + 1)")
-                                            .font(.custom("KaiseiOpti-Medium", size: 24.0))
-                                            .foregroundColor(Color(UIColor(hexString: "6C6C6A")))
-                                        Spacer()
-                                        Text("\(pastQuizes[i].quizData[0])")
-                                            .font(.custom("KaiseiOpti-Medium", size: 24.0))
-                                            .foregroundColor(Color(UIColor(hexString: "6C6C6A")))
-                                            .frame(width: 200, height: 55)
-                                        Spacer()
-                                    }
-                                   
-                                )
-                        }
-                        .sheet(isPresented: $isShowModalView, onDismiss : {
-                            self.isShowModalView = false
-                            print("Close")
-                            
-                        })
-                        {
-                            DetailView(quizDetail: pastQuizes[self.selectedQuizIndex])
-                        }
+                    ForEach(pastQuizes.indices, id: \.self) { i in
+                        DetailButtonView(selectedQuiz: pastQuizes[i], index: i)
+//                        Button(action: {
+//                            self.DetailButtonAction(i: i)
+//                        }) {
+//                            Rectangle()
+//                                .foregroundColor(Color(UIColor(hexString: "F6F5F0")))
+//                                .frame(width: 310, height: 55)
+//                                .border(Color(UIColor(hexString: "B2B2B0")), width: 5)
+//                                .overlay(
+//                                    HStack{
+//                                        Spacer()
+//                                        Text("Q.\(i + 1)")
+//                                            .font(.custom("KaiseiOpti-Medium", size: 24.0))
+//                                            .foregroundColor(Color(UIColor(hexString: "6C6C6A")))
+//                                        Spacer()
+//                                        Text("\(pastQuizes[i].quizData[0])")
+//                                            .font(.custom("KaiseiOpti-Medium", size: 24.0))
+//                                            .foregroundColor(Color(UIColor(hexString: "6C6C6A")))
+//                                            .frame(width: 200, height: 55)
+//                                        Spacer()
+//                                    }
+//                                   
+//                                )
+//                        }
+//                        .sheet(isPresented: $isShowModalView, onDismiss : {
+//                            self.isShowModalView = false
+//                            print("Close")
+//                            
+//                        })
+//                        {
+//                            DetailView(quizDetail: pastQuizes[selectedQuizIndex])
+//                        }
                     }
                 }
                 
@@ -212,7 +252,7 @@ struct ResultView: View {
         }
     }
 }
-
+                
 #Preview {
     ResultView(pastQuizes: pastQuizes, score: 0)
 }

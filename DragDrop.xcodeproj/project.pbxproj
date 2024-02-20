@@ -11,7 +11,6 @@
 		64629B692B7468920021BF32 /* DragDropApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64629B682B7468920021BF32 /* DragDropApp.swift */; };
 		64629B6B2B7468920021BF32 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64629B6A2B7468920021BF32 /* ContentView.swift */; };
 		64629B6D2B7468930021BF32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64629B6C2B7468930021BF32 /* Assets.xcassets */; };
-		64629B702B7468930021BF32 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64629B6F2B7468930021BF32 /* Preview Assets.xcassets */; };
 		64629B7A2B7468930021BF32 /* DragDropTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64629B792B7468930021BF32 /* DragDropTests.swift */; };
 		64629B842B7468930021BF32 /* DragDropUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64629B832B7468930021BF32 /* DragDropUITests.swift */; };
 		64629B862B7468930021BF32 /* DragDropUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64629B852B7468930021BF32 /* DragDropUITestsLaunchTests.swift */; };
@@ -19,9 +18,9 @@
 		6466906B2B765DC40089A941 /* KaiseiOpti-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 646690672B765DC40089A941 /* KaiseiOpti-Bold.ttf */; };
 		6466906C2B765DC40089A941 /* KaiseiOpti-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 646690682B765DC40089A941 /* KaiseiOpti-Medium.ttf */; };
 		6466906D2B765DC40089A941 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 646690692B765DC40089A941 /* OFL.txt */; };
+		647F47642B84E16F009F6FED /* quiz1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 647F47632B84E16F009F6FED /* quiz1.csv */; };
 		648E73792B77BE97005325F3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648E73782B77BE97005325F3 /* DetailView.swift */; };
 		64B8FBD52B7608FB00ABF6DE /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8FBD42B7608FB00ABF6DE /* QuizView.swift */; };
-		64EEFD012B78A363009C2B7A /* quiz1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 64EEFD002B78A363009C2B7A /* quiz1.csv */; };
 		64EEFD042B78A379009C2B7A /* quiz2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 64EEFD022B78A379009C2B7A /* quiz2.csv */; };
 		64EEFD052B78A379009C2B7A /* quiz1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 64EEFD032B78A379009C2B7A /* quiz1.csv */; };
 		64EEFD072B791455009C2B7A /* HelpModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EEFD062B791455009C2B7A /* HelpModalView.swift */; };
@@ -51,7 +50,6 @@
 		64629B682B7468920021BF32 /* DragDropApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDropApp.swift; sourceTree = "<group>"; };
 		64629B6A2B7468920021BF32 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		64629B6C2B7468930021BF32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		64629B6F2B7468930021BF32 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		64629B752B7468930021BF32 /* DragDropTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragDropTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64629B792B7468930021BF32 /* DragDropTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDropTests.swift; sourceTree = "<group>"; };
 		64629B7F2B7468930021BF32 /* DragDropUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragDropUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,9 +60,9 @@
 		646690682B765DC40089A941 /* KaiseiOpti-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KaiseiOpti-Medium.ttf"; sourceTree = "<group>"; };
 		646690692B765DC40089A941 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		647C02C22B7475B0003EC0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		647F47632B84E16F009F6FED /* quiz1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = quiz1.csv; sourceTree = "<group>"; };
 		648E73782B77BE97005325F3 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		64B8FBD42B7608FB00ABF6DE /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
-		64EEFD002B78A363009C2B7A /* quiz1.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = quiz1.csv; path = DragDrop/quiz1.csv; sourceTree = SOURCE_ROOT; };
 		64EEFD022B78A379009C2B7A /* quiz2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = quiz2.csv; sourceTree = "<group>"; };
 		64EEFD032B78A379009C2B7A /* quiz1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = quiz1.csv; sourceTree = "<group>"; };
 		64EEFD062B791455009C2B7A /* HelpModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpModalView.swift; sourceTree = "<group>"; };
@@ -130,19 +128,10 @@
 				6425F7A92B75BC8100DA6270 /* ResultView.swift */,
 				64629B6C2B7468930021BF32 /* Assets.xcassets */,
 				64EEFD032B78A379009C2B7A /* quiz1.csv */,
+				647F47632B84E16F009F6FED /* quiz1.csv */,
 				64EEFD022B78A379009C2B7A /* quiz2.csv */,
-				64629B6E2B7468930021BF32 /* Preview Content */,
 			);
 			path = DragDrop;
-			sourceTree = "<group>";
-		};
-		64629B6E2B7468930021BF32 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				64EEFD002B78A363009C2B7A /* quiz1.csv */,
-				64629B6F2B7468930021BF32 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		64629B782B7468930021BF32 /* DragDropTests */ = {
@@ -278,12 +267,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6466906D2B765DC40089A941 /* OFL.txt in Resources */,
-				64629B702B7468930021BF32 /* Preview Assets.xcassets in Resources */,
 				6466906C2B765DC40089A941 /* KaiseiOpti-Medium.ttf in Resources */,
 				64629B6D2B7468930021BF32 /* Assets.xcassets in Resources */,
-				64EEFD012B78A363009C2B7A /* quiz1.csv in Resources */,
 				64EEFD092B7918FF009C2B7A /* playVideo.mp4 in Resources */,
 				64EEFD052B78A379009C2B7A /* quiz1.csv in Resources */,
+				647F47642B84E16F009F6FED /* quiz1.csv in Resources */,
 				6466906B2B765DC40089A941 /* KaiseiOpti-Bold.ttf in Resources */,
 				64EEFD042B78A379009C2B7A /* quiz2.csv in Resources */,
 				6466906A2B765DC40089A941 /* KaiseiOpti-Regular.ttf in Resources */,
