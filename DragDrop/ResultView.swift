@@ -2,7 +2,7 @@
 //  ResultView.swift
 //  DragDrop
 //
-//  Created by 濱野遥斗 on 2024/02/09.
+//  Created by Haruto Hamano on 2024/02/09.
 //
 
 import SwiftUI
@@ -185,37 +185,6 @@ struct ResultView: View {
                 VStack{
                     ForEach(pastQuizes.indices, id: \.self) { i in
                         DetailButtonView(selectedQuiz: pastQuizes[i], index: i)
-//                        Button(action: {
-//                            self.DetailButtonAction(i: i)
-//                        }) {
-//                            Rectangle()
-//                                .foregroundColor(Color(UIColor(hexString: "F6F5F0")))
-//                                .frame(width: 310, height: 55)
-//                                .border(Color(UIColor(hexString: "B2B2B0")), width: 5)
-//                                .overlay(
-//                                    HStack{
-//                                        Spacer()
-//                                        Text("Q.\(i + 1)")
-//                                            .font(.custom("KaiseiOpti-Medium", size: 24.0))
-//                                            .foregroundColor(Color(UIColor(hexString: "6C6C6A")))
-//                                        Spacer()
-//                                        Text("\(pastQuizes[i].quizData[0])")
-//                                            .font(.custom("KaiseiOpti-Medium", size: 24.0))
-//                                            .foregroundColor(Color(UIColor(hexString: "6C6C6A")))
-//                                            .frame(width: 200, height: 55)
-//                                        Spacer()
-//                                    }
-//                                   
-//                                )
-//                        }
-//                        .sheet(isPresented: $isShowModalView, onDismiss : {
-//                            self.isShowModalView = false
-//                            print("Close")
-//                            
-//                        })
-//                        {
-//                            DetailView(quizDetail: pastQuizes[selectedQuizIndex])
-//                        }
                     }
                 }
                 

@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  DragDrop
 //
-//  Created by 濱野遥斗 on 2024/02/08.
+//  Created by Haruto Hamano on 2024/02/08.
 //
 
 import SwiftUI

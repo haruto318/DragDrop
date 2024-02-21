@@ -2,7 +2,7 @@
 //  DetailView.swift
 //  DragDrop
 //
-//  Created by 濱野遥斗 on 2024/02/10.
+//  Created by Haruto Hamano on 2024/02/10.
 //
 
 import SwiftUI
@@ -12,12 +12,6 @@ let sampleData: pastQuiz = pastQuiz(isCorrect: 0, quizData: ["Maguro?", "maguro"
 struct DetailView: View {
 
     var quizDetail: pastQuiz
-    
-//    init(quizDetail: pastQuiz) {
-//        self.quizDetail = quizDetail
-//        print(quizDetail)
-//    }
-    
 
     var body: some View {
         VStack{
